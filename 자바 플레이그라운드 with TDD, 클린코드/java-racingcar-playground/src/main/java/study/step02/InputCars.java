@@ -15,7 +15,6 @@ public class InputCars {
     }
 
     public List<Car> splitAndMakeCars(String input) {
-        
         return null;
     }
 }
