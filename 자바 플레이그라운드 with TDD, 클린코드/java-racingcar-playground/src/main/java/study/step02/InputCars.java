@@ -1,6 +1,8 @@
 package study.step02;
 
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class InputCars {
 
@@ -15,6 +17,7 @@ public class InputCars {
     }
 
     public List<Car> splitAndMakeCars(String input) {
-        return null;
+        List<String> carNames = Arrays.asList(input.split(","));
+        return carNames.stream().map(name -> new Car(new CarName(name), new CarLocation())).collect(Collectors.toList());
     }
 }

@@ -28,5 +28,16 @@ public class CarTest {
         Assertions.assertThat(carLocation.canIncrease(number)).isEqualTo(check);
     }
 
+    @Test
+    @DisplayName("차이름 입력한대로 차생성하는지 확인")
+    public void makeCarsTest() throws Exception {
+        String rightInput = "park,jong,hyuk";
+        String wrongInput = "mrPPak,jong,hyuk";
+
+        Assertions.assertThat(new InputCars(rightInput).getCars().size()).isEqualTo(3);
+        Assertions.assertThatThrownBy(() -> {
+            new InputCars(wrongInput);
+        }).isInstanceOf(IllegalStateException.class);
+    }
 
 }
