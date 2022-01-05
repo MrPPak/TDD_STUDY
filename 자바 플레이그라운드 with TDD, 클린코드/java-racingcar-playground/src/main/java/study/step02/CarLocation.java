@@ -12,15 +12,10 @@ public class CarLocation {
         return this.location;
     }
 
-    public boolean canIncrease(int num) {
+    public void increaseLocation(int num) {
         if(num >= 4) {
-            return true;
+            location++;
         }
-        return false;
-    }
-
-    public void increaseLocation() {
-        location++;
     }
 
 }

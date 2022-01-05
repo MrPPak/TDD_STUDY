@@ -16,7 +16,7 @@ public class InputCars {
         return this.cars;
     }
 
-    public List<Car> splitAndMakeCars(String input) {
+    private List<Car> splitAndMakeCars(String input) {
         List<String> carNames = Arrays.asList(input.split(","));
         return carNames.stream().map(name -> new Car(new CarName(name), new CarLocation())).collect(Collectors.toList());
     }
