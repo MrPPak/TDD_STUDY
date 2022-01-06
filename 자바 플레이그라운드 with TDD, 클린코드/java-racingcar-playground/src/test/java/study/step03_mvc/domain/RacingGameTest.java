@@ -1,4 +1,4 @@
-package study.step03_mvc;
+package study.step03_mvc.domain;
 
 public class RacingGameTest {
 }
