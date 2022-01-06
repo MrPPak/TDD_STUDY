@@ -31,7 +31,7 @@ public class Position {
         return Position.of(this.position + position);
     }
 
-    public boolean isOn(int max) {
+    public boolean isMaxPosition(int max) {
         return max == this.position;
     }
 
