@@ -25,6 +25,7 @@ public class CarTest {
         // then
         Assertions.assertThat(movableCar.getPosition()).isEqualTo(Position.of(5));
         Assertions.assertThat(immovableCar.getPosition()).isEqualTo(Position.of(0));
+
     }
 
 }
