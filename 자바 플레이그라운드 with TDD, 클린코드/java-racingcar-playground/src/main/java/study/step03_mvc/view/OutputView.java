@@ -13,8 +13,7 @@ public class OutputView {
     public static final String RACING_RESULT_MESSAGE = "실행결과";
     public static final String GO_FORWARD_MARK = "-";
 
-    private OutputView() {
-    }
+    private OutputView() {}
 
     public static void printRaceResultMessage() {
         System.out.println();
