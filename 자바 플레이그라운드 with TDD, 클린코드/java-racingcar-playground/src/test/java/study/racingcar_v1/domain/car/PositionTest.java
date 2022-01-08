@@ -1,8 +1,9 @@
-package study.racingcar_v1.domain;
+package study.racingcar_v1.domain.car;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import study.racingcar_v1.domain.Position;
 
 public class PositionTest {
 
