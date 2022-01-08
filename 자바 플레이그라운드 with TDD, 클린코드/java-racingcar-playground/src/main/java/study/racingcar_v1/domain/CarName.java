@@ -1,5 +1,7 @@
 package study.racingcar_v1.domain;
 
+import study.racingcar_v1.exception.InvalidCarNameException;
+
 import java.util.Objects;
 
 public class CarName {
@@ -20,7 +22,7 @@ public class CarName {
 
     private static void validateCarName(String carName) {
         if(carName.length() < CAR_NAME_MIN_LENGTH || carName.length() > CAR_NAME_MAX_LENGTH) {
-            throw new RuntimeException("자동차 이름은 1자이상 5자 이하입니다.");
+            throw new InvalidCarNameException("자동차 이름은 1자이상 5자 이하입니다.");
         }
     }
 

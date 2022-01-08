@@ -2,6 +2,7 @@ package study.racingcar_v1.domain;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
+import study.racingcar_v1.exception.InvalidCarNameException;
 
 public class CarNameTest {
 
@@ -13,10 +14,10 @@ public class CarNameTest {
 
         Assertions.assertThatThrownBy(() -> {
             CarName.of(carNameOverMax);
-        }).isInstanceOf(RuntimeException.class);
+        }).isInstanceOf(InvalidCarNameException.class);
 
         Assertions.assertThatThrownBy(() -> {
             CarName.of(carNameLessMin);
-        }).isInstanceOf(RuntimeException.class);
+        }).isInstanceOf(InvalidCarNameException.class);
     }
 }

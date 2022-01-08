@@ -2,7 +2,7 @@ package study.racingcar_v1.domain;
 
 public class Car {
 
-    private String carName;
-
+    private CarName carName;
+    private Position position;
 
 }
