@@ -5,12 +5,14 @@ import study.step03_mvc.utils.ValidateUtils;
 import study.step03_mvc.view.InputView;
 import study.step03_mvc.view.OutputView;
 
+import java.util.Scanner;
+
 public class GameController {
 
     private InputView inputView;
 
-    public GameController(InputView inputView) {
-        this.inputView = inputView;
+    public GameController(Scanner scanner) {
+        this.inputView = new InputView(scanner);
     }
 
     public void play() {
