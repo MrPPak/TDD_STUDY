@@ -50,4 +50,8 @@ public class OutputView {
         System.out.println(winnersNames + RACING_GAME_WINNERS_MESSAGE);
     }
 
+    public static void printExceptionMessage(Exception e) {
+        System.out.println(e.getMessage());
+    }
+
 }
