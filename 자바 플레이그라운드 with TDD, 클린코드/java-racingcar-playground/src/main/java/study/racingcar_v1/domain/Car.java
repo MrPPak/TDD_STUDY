@@ -23,6 +23,10 @@ public class Car {
         }
     }
 
+    public boolean isWinner(int max) {
+        return position.isMaxPosition(max);
+    }
+
     public String getCarName() {
         return carName.getValue();
     }
