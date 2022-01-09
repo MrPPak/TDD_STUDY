@@ -1,4 +1,53 @@
 package study.racingcar_v1.view;
 
+import study.racingcar_v1.domain.car.Car;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class OutputView {
+
+    public static final String RACING_GAME_WINNERS_MESSAGE = "가 최종우승했습니다.";
+    public static final String INPUT_CAR_NAME_MESSAGE = "경주할 자동차 이름을 입력하세요(이름은 쉼표(,))를 기준으로 구분";
+    public static final String INPUT_NUM_OF_ROUND_MESSAGE = "시도할 횟수는 몇회인가요?";
+    public static final String RACING_RESULT_MESSAGE = "실행결과";
+    public static final String GO_FORWARD_MARK = "-";
+
+    private OutputView() {}
+
+    public static void printRaceResultMessage() {
+        System.out.println();
+        System.out.println(RACING_RESULT_MESSAGE);
+    }
+
+    public static void printInputCarNamesMessage() {
+        System.out.println(INPUT_CAR_NAME_MESSAGE);
+    }
+
+    public static void printInputNumOfRoundMessage() {
+        System.out.println(INPUT_NUM_OF_ROUND_MESSAGE);
+    }
+
+    public static void printCarStatus(List<Car> cars) {
+        cars.forEach(car ->
+                System.out.println(car.getCarName() + " : " + renderingCurrentCarPosition(car))
+        );
+        System.out.println();
+    }
+
+    private static String renderingCurrentCarPosition(Car car) {
+        StringBuilder currenPosition = new StringBuilder();
+        for (int i = 0; i < car.getCurrentPosition(); i++) {
+            currenPosition.append(GO_FORWARD_MARK);
+        }
+        return currenPosition.toString();
+    }
+
+    public static void printWinner(List<Car> winners) {
+        String winnersNames = winners.stream()
+                .map(Car::getCarName)
+                .collect(Collectors.joining(","));
+        System.out.println(winnersNames + RACING_GAME_WINNERS_MESSAGE);
+    }
+
 }
