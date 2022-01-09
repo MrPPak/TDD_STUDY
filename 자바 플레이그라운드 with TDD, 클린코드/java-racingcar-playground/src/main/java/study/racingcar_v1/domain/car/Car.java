@@ -1,6 +1,6 @@
-package study.racingcar_v1.domain;
+package study.racingcar_v1.domain.car;
 
-import study.racingcar_v1.engine.Engine;
+import study.racingcar_v1.domain.engine.Engine;
 
 public class Car {
 

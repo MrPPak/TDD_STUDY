@@ -1,15 +1,10 @@
 package study.racingcar_v1.domain.car;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import study.racingcar_v1.domain.Car;
-import study.racingcar_v1.domain.Cars;
-import study.racingcar_v1.domain.Position;
 import study.racingcar_v1.domain.engine.FixedEngine;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;

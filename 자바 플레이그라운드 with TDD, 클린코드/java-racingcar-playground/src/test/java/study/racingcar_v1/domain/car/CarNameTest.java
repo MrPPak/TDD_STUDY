@@ -2,7 +2,6 @@ package study.racingcar_v1.domain.car;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import study.racingcar_v1.domain.CarName;
 import study.racingcar_v1.exception.InvalidCarNameException;
 
 public class CarNameTest {

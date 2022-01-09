@@ -1,4 +1,4 @@
-package study.racingcar_v1.engine;
+package study.racingcar_v1.domain.engine;
 
 public interface Engine {
 
