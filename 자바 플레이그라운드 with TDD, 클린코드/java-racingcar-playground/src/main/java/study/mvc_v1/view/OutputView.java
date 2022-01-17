@@ -32,7 +32,6 @@ public class OutputView {
         System.out.println(e.getMessage());
     }
 
-    // 매개변수를 Cars 클래스로 바꿔보는것은 어떨까
     public static void printCarStatus(List<Car> cars) {
         cars.forEach(car ->
             System.out.println(car.getCarName().getValue() + " : " + renderingCurrentCarPosition(car))
@@ -45,6 +44,7 @@ public class OutputView {
         for (int i = 0; i < car.getPosition().getValue(); i++) {
             currentPosition.append(GO_FORWARD_MARK);
         }
+
         return currentPosition.toString();
     }
 
