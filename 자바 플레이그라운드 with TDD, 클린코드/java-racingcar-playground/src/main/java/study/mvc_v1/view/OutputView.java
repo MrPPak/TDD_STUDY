@@ -34,14 +34,14 @@ public class OutputView {
 
     public static void printCarStatus(List<Car> cars) {
         cars.forEach(car ->
-            System.out.println(car.getCarName().getValue() + " : " + renderingCurrentCarPosition(car))
+            System.out.println(car.getCarName() + " : " + renderingCurrentCarPosition(car))
         );
         System.out.println();
     }
 
     private static String renderingCurrentCarPosition(Car car) {
         StringBuilder currentPosition = new StringBuilder();
-        for (int i = 0; i < car.getPosition().getValue(); i++) {
+        for (int i = 0; i < car.getPosition(); i++) {
             currentPosition.append(GO_FORWARD_MARK);
         }
 
@@ -50,7 +50,7 @@ public class OutputView {
 
     public static void printWinner(List<Car> winners) {
         String winnersName = winners.stream()
-                .map(car -> car.getCarName().getValue())
+                .map(car -> car.getCarName())
                 .collect(Collectors.joining(","));
         System.out.println(winnersName + RACING_GAME_WINNERS_MESSAGE);
     }

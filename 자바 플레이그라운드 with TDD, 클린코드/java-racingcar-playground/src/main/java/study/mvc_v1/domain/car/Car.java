@@ -27,11 +27,11 @@ public class Car {
         return position.isMaxPosition(max);
     }
 
-    public Position getPosition() {
-        return this.position;
+    public int getPosition() {
+        return this.position.getValue();
     }
 
-    public CarName getCarName() {
-        return this.name;
+    public String getCarName() {
+        return this.name.getValue();
     }
 }

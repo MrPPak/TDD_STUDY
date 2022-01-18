@@ -26,7 +26,7 @@ public class Cars {
 
     private int findMaxPosition() {
         return cars.stream()
-                .map(car -> car.getPosition().getValue())
+                .map(car -> car.getPosition())
                 .max(Integer::compare).orElseThrow(() -> new RuntimeException("No Winner"));
     }
 

@@ -10,6 +10,6 @@ public class FixedEngine implements Engine {
 
     @Override
     public boolean moveable() {
-        return num > MOVEABLE_DIGIT;
+        return num > MOVABLE_DIGIT;
     }
 }

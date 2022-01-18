@@ -9,6 +9,6 @@ public class RandomEngine implements Engine{
 
     @Override
     public boolean moveable() {
-        return RandomUtils.nextInt(MIN_VALUE, MAX_VALUE) > MOVEABLE_DIGIT;
+        return RandomUtils.nextInt(MIN_VALUE, MAX_VALUE) > MOVABLE_DIGIT;
     }
 }
